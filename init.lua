@@ -421,6 +421,24 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 
+    -- toggleterm
+    {
+        'akinsho/toggleterm.nvim',
+        opts = {
+            open_mapping = [[<C-\>]],
+            direction = 'float',
+            float_opts = { border = 'rounded', width = 100, height = 25 },
+        },
+    },
+
+    -- Java
+    {
+        "mfussenegger/nvim-jdtls",
+        ft = "java",
+        dependencies = {
+        },
+    },
+
     -- VimTex
     {
         "lervag/vimtex",
